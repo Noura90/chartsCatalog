@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChartService } from '../services/charts.service';
 
 @Component({
   selector: 'app-charts-list',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./charts-list.component.css']
 })
 export class ChartsListComponent implements OnInit {
+  charts = [];
 
-  constructor() { }
+  constructor(private chartService : ChartService) { }
 
   ngOnInit() {
+    this.charts = this.chartService.getCharts();
   }
 
 }

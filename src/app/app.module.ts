@@ -8,6 +8,9 @@ import { DevExtremeModule} from 'devextreme-angular';
 import { PieComponent } from './charts-catalog/pie/pie.component';
 import { SubventionService } from './services/subventions.service';
 import { ChartsListComponent } from './charts-list/charts-list.component';
+import { ChartService } from './services/charts.service';
+import { ChartsCatalogComponent } from './charts-catalog/charts-catalog.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -15,13 +18,15 @@ import { ChartsListComponent } from './charts-list/charts-list.component';
     AppComponent,
     SideBySideComponent,
     PieComponent,
-    ChartsListComponent
+    ChartsListComponent,
+    ChartsCatalogComponent
   ],
   imports: [
     BrowserModule,
-    DevExtremeModule
+    DevExtremeModule,
+    AppRoutingModule
   ],
-  providers: [ProductDetailsService, SubventionService],
+  providers: [ProductDetailsService, SubventionService, ChartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,12 +8,14 @@ import { SubventionService } from 'src/app/services/subventions.service';
 })
 export class PieComponent implements OnInit {
   title : string = '';
+  subtitle : string = '';
   datasource = [];
 
   constructor(private subventionService : SubventionService) { }
 
   ngOnInit() {
     this.title = this.subventionService.getTitle();
+    this.subtitle = this.subventionService.getSubtitle();
     this.datasource = this.subventionService.getSubventions();
   }
 

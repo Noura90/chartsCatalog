@@ -1,3 +1,16 @@
-<p>
-  charts-list works!
-</p>
+<div class="mt-3">
+<dx-list
+class="list"
+[dataSource]="charts"
+[searchEnabled]="true"
+selectionMode ="single">
+<div *dxTemplate= "let item of 'item'">
+  <div class="mt-3">
+      <a style="font-weight: bold"
+      [routerLink]="['/charts', item.type]">
+        {{item.titleMin}}
+    </a>
+  </div>
+</div>
+</dx-list>
+</div>

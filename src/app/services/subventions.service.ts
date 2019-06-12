@@ -4,7 +4,9 @@ class Subvention {
 }
 
 export class SubventionService{
-    title : string= 'Origine des Subventions Budget Revisité - Année 2018/2019 En %'
+    title : string= 'Origine des Subventions Budget Revisité -'
+    subtitle: string = ' Année 2018/2019 En %';
+    tilteMin : string = 'Origine des Subventions'
 
     subventions : Subvention[]= [
         {"origin": "Paris", "value": 95},
@@ -16,6 +18,15 @@ export class SubventionService{
 
     getTitle(){
         return this.title;
+    }
+
+    
+    getTitleMin(){
+        return this.tilteMin;
+    }
+
+    getSubtitle(){
+        return this.subtitle;
     }
 
     getSubventions(){

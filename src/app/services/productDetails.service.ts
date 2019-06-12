@@ -9,6 +9,7 @@ class ProductDetails {
 export class ProductDetailsService {
 
     title: string = 'Détail des produits par Activité Budget Réalisé-';
+    tilteMin : string = 'Produits par Activité';
     subtitle : string = 'Exercice en cours et N-1 en Euros';
     productDetails : ProductDetails[] = [
         {"activity" : "Aides/Subventions",
@@ -54,6 +55,10 @@ export class ProductDetailsService {
                 "currentYearValue": "2017/2018",
                 "lastYearValue": "2018/2019"},
     ];
+
+    getTitleMin(){
+        return this.tilteMin;
+    }
 
     getTitle(){
         return this.title;

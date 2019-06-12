@@ -1,0 +1,41 @@
+<div style="margin-top: 20px">
+ <div class="border border-secondary rounded">
+    <h2>{{ title }}</h2>
+    <h2>{{ subtitle }}</h2>
+    <dx-chart 
+    [dataSource]="dataSource">
+    <dxo-margin
+    [top]="20"
+    [bottom]="20"
+    [left]="30"
+    [right]="30">
+    </dxo-margin>
+    <dxo-size
+    [height]="450"
+    [width]="850">
+</dxo-size>
+        <dxi-series 
+        valueField="currentYear" 
+        name="2018/2019"></dxi-series>
+        <dxi-series 
+        valueField="lastYear" 
+        name="2017/2018"></dxi-series>
+        <dxo-common-series-settings 
+        argumentField="activity"
+        type="bar">
+        <dxo-label
+        [visible]="true"
+        [format]="{
+            type: 'fixedPoint',
+            precision: '0'
+        }"></dxo-label>
+    </dxo-common-series-settings>
+    <dxo-legend
+            verticalAlignment="bottom"
+            horizontalAlignment="center">
+        </dxo-legend>
+        <dxo-export [enabled]="true"></dxo-export>
+
+    </dx-chart>
+</div>
+</div>

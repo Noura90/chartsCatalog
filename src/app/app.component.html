@@ -1,13 +1,31 @@
-<div class="container">
-    <div class ="row">
-        <div class="col-3  left" style="margin-top: 20px">
-            <app-charts-list></app-charts-list>
-        </div>
-        <div class="col-9" style="margin-top: 20px">
-            <app-charts-catalog></app-charts-catalog>
+<div class="ui container" style="width: 100%; margin: 0px !important; ">
+    <div class="ui grid"> 
+            <div class="row charts-list" style="margin: 0px; padding-bottom: 0px !important; border-bottom: 1px solid lightgray; ">
+                    <div style="width: 18.88% !important;">
+                        <div style="width: 60%">
+                          
+                            <p style="color:white; float: right; margin-bottom: 0px !important; margin-top: 10px; font-weight: bold; ">Bibliothèque</p>
+                           
+                            <div style="float: none;">
+                        <i class="huge paperclip icon" style="color:white; height: 30px; font-size: 30px; margin-left:10px; margin-top:10px; "></i>
+                    </div>
+                </div>
+                    </div>
+                  </div>
+        <div class="row" style="margin: 0px; padding: 0px;">
+           
+            <div class="three wide column entry charts-list" style="padding: 0px !important;">
+                <div class="segment full-height">
+                    <app-charts-list></app-charts-list>
+                </div>
+            </div>
+     
+            <div class="thirteen wide column" style="padding: 0px !important;">
+                <div class="segment full-height">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
         </div>
     </div>
+
 </div>
-
-
-

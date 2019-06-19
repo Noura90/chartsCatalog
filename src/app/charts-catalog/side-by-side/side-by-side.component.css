@@ -1,7 +1,49 @@
-h2:first-child {
-    margin-top: 10px;
-    margin-left: 50px;
+.animation1 {
+	-webkit-animation: color_change 1s infinite alternate;
+	-moz-animation: color_change 1s infinite alternate;
+	-ms-animation: color_change 1s infinite alternate;
+	-o-animation: color_change 1s infinite alternate;
+	animation: color_change 1s infinite alternate;
 }
-h2{
-    margin-left: 70px;
+
+
+.colorIcon {
+    color : darkslategray;
+}
+
+.colorIcon:hover {
+    color: lightblue;
+}
+
+.animateClass {
+    animation: colorchange 50s; /* animation-name followed by duration in seconds*/
+       /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorchange 50s; /* Chrome and Safari */
+  }
+
+  @keyframes colorchange
+  {
+    0%   {background: white}
+
+    50%  {background: lightblue;}
+
+  }
+
+  @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+  {
+    0%   {background: white;}
+
+    50%  {background: lightblue;}
+ 
+  }
+
+   .main {
+	margin: 1em 0 0.5em 0;
+	color: #343434;
+	font-weight: normal;
+	font-family: 'Ultra', sans-serif;   
+	font-size: 36px;
+	line-height: 42px;
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px #777;
 }

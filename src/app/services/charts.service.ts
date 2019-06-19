@@ -6,6 +6,7 @@ class Chart {
     titleMin: string;
     title : string;
     type : string;
+    createdOn: Date;
 }
 
 @Injectable()
@@ -19,10 +20,12 @@ export class ChartService {
     charts : Chart[] = [
         {"titleMin" : this.productDetailService.getTitleMin() ,
         "title":this.productDetailService.getTitle()+ this.productDetailService.getSubtitle(),
-         "type": "sideByside"},
+         "type": "sideByside",
+        "createdOn": new Date(2019,1,1)},
         {"titleMin" : this.subventionService.getTitleMin() ,
         "title":this.subventionService.getTitle()+ this.subventionService.getSubtitle(),
-         "type": "pie"}
+         "type": "pie",
+         "createdOn": new Date(2019,1,1)}
     ];
 
     getCharts(){

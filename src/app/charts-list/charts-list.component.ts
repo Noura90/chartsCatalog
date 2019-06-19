@@ -8,11 +8,15 @@ import { ChartService } from '../services/charts.service';
 })
 export class ChartsListComponent implements OnInit {
   charts = [];
+  index: number;
+  deleteFlag = true;
 
   constructor(private chartService : ChartService) { }
 
   ngOnInit() {
     this.charts = this.chartService.getCharts();
   }
+
+
 
 }

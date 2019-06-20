@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/animate.css/animate.min.css",
               "./semantic-ui/dist/semantic.min.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/devextreme/dist/css/dx.common.css",

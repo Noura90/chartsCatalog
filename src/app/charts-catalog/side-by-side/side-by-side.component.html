@@ -1,75 +1,53 @@
-<div class="ui container" >
 
-<!--     <div class="row">
-        <div class="col-12" style="margin: 0px !important; ">
-            <div style="background-color:#051937; margin: 0px !important; font-size: 17px;">
-                <marquee style="color: white;">{{ title }} {{subtitle}}</marquee>
-            </div>
-        </div>
-    </div> -->
+
     <div class="ml-4">
-    <div class="row mt-3">
-        <div class="col-9">
-        <div style="width: 60%;">
-            <div class="content">
-                <h4>{{ title }} {{subtitle}}</h4>
-            </div>
-        </div>
-    </div>
-    </div>
-
-    <div class="row" style="margin-top: 10%">
-        <div class="col-9">
-            <div class="ui card" style="width: 90%">
-                <div class="image" style="background-color: transparent!important;">
-                    <dx-chart [dataSource]="dataSource">
-
-                        <dxo-margin [top]="20" [bottom]="20" [left]="30" [right]="30">
-                        </dxo-margin>
-
-                        <dxi-series valueField="currentYear" name="2018/2019"></dxi-series>
-                        <dxi-series valueField="lastYear" name="2017/2018"></dxi-series>
-                        <dxo-common-series-settings argumentField="activity" type="bar">
-                            <dxo-label [visible]="true" [format]="{
-                                type: 'fixedPoint',
-                                precision: '0'
-                            }"></dxo-label>
-                        </dxo-common-series-settings>
-                        <dxo-common-axis-settings color="black">
-
-                            <dxo-common-annotation-settings color="black">
-                            </dxo-common-annotation-settings>
-
-                        </dxo-common-axis-settings>
-                        <dxo-legend verticalAlignment="bottom" horizontalAlignment="center">
-                        </dxo-legend>
-
-
-                    </dx-chart>
+        <div class="row mt-3">
+            <div class="col-9">
+                <div style="width: 60%;">
+                    <div class="content">
+                        <h4>{{ title }} {{subtitle}}</h4>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-3">
-            <div class="ui list">
 
-                <h4 class="ui icon header colorIcon">
-                    <i class="paint brush icon"></i>
-                    <div class="content">
-                        Customize Color
-                    </div>
-                </h4>
+        <div style="margin-top: 10%">
+            <div class="col-12">
+             
+                        <dx-chart [dataSource]="dataSource">
+                    
+                       <dxo-value-axis [axisDivisionFactor]="20">
+                       </dxo-value-axis>
+
+                            <dxo-margin [top]="20" [bottom]="20" [left]="30" [right]="30">
+                            </dxo-margin>
+
+                            <dxi-series valueField="currentYear" name="2018/2019"></dxi-series>
+                            <dxi-series valueField="lastYear" name="2017/2018"></dxi-series>
+                            <dxo-common-series-settings argumentField="activity" type="bar">
+                                <dxo-label [visible]="true" [format]="{
+                                type: 'fixedPoint',
+                                precision: '0'
+                            }"></dxo-label>
+                            </dxo-common-series-settings>
+                            <dxo-common-axis-settings color="black">
+
+                                <dxo-common-annotation-settings color="black">
+                                </dxo-common-annotation-settings>
+
+                            </dxo-common-axis-settings>
+                            <dxo-legend verticalAlignment="bottom" horizontalAlignment="center">
+                            </dxo-legend>
+
+
+                        </dx-chart>
+            
             </div>
         </div>
-
-
-
-
     </div>
-</div>
 
 
 
 
 
 
-</div>

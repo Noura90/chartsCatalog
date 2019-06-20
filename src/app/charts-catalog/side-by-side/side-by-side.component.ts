@@ -11,6 +11,7 @@ export class SideBySideComponent implements OnInit {
   dataSource = [];
   title = '';
   subtitle = '';
+  chartVisualRange = [0, 1000];
 
   constructor(private productDetailsService: ProductDetailsService) { }
 

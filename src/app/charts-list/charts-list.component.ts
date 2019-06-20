@@ -9,12 +9,16 @@ import { ChartService } from '../services/charts.service';
 export class ChartsListComponent implements OnInit {
   charts = [];
   index: number;
-  deleteFlag = true;
+  deleteFlag = false;
 
   constructor(private chartService : ChartService) { }
 
   ngOnInit() {
     this.charts = this.chartService.getCharts();
+  }
+
+  onDeletePermit(){
+    this.deleteFlag = true;
   }
 
 

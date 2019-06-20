@@ -1,0 +1,11 @@
+.footerEl {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.btnAnimate {
+    animation-name: slideInUp, shake;
+    animation-delay: 0s, 1s;
+    animation-duration: 1s, 1s;
+}

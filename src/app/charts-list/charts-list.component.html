@@ -10,7 +10,7 @@
     <div class="col-8" style="padding-left: 8px !important;">
       <div class="ui buttons">
         <button class="ui button">
-          <i class="minus icon" style="padding-left: 7px;"></i>
+          <i class="minus icon" style="padding-left: 7px;" (click)="onDeletePermit()"></i>
         </button>
         <div class="or" data-text="ou"></div>
         <button class="ui primary button">
@@ -36,6 +36,10 @@
       </div>
 
     </div>
+  </div>
+
+  <div class="btnAnimate" *ngIf="deleteFlag">
+    <button class="ui negative basic button">Supprimer</button>
   </div>
 
 </div>
